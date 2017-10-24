@@ -67,10 +67,6 @@ class CheckTrelloIncidents < Sensu::Plugin::Check::CLI
     long: '--api-token TOKEN'
 
   def run
-    if config[:list].match(/\A[a-z0-9]*\z/).nil?
-      raise 'Invalid value for list parameter: ' + config[:list]
-    end 
-
     host = config[:host]
     port = config[:port]
     key =  config[:api_key] || settings['trello_incidents']['api']['key']
@@ -84,12 +80,16 @@ class CheckTrelloIncidents < Sensu::Plugin::Check::CLI
     rescue Timeout::Error
       unknown 'Connection timed out'
     rescue => e
-      unknown 'Connection error: #{e.message}'
+      unknown 'Error: ' + e.message
     end
        
   end
 
   def check_list(host, port, key, token, list)
+    if list.match(/\A[a-z0-9]*\z/).nil?
+      raise 'Invalid value for list parameter: ' + list
+    end 
+
     path = '/1/lists/' + list + '/cards'
     
     uri = URI.parse('https://' + host + ':' + port + path)
