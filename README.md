@@ -1,4 +1,4 @@
-# Trello::Incidents
+# Sensu check for new incidents in Trello
 
 Checks for cards in a trello list. If cards are present, the check returns 
 _CRITICAL_, containing name and date of last activity of card. When more 
