@@ -1,8 +1,9 @@
 # Trello::Incidents
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/trello/incidents`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Checks for cards in a trello list. If cards are present, the check returns 
+_CRITICAL_, containing name and date of last activity of card. When more 
+than one card is present, all card names and dates are returned with _;_ 
+delimiter.
 
 ## Installation
 
@@ -20,9 +21,38 @@ Or install it yourself as:
 
     $ gem install trello-incidents
 
-## Usage
+## CONFIGURATION
+Configuration of API key and API token should be done through the sensu 
+settings file located in _/etc/sensu/conf.d/_. 
+      
+_api_key_ and _api_token_ can be obtained from [Trello](https://trello.com/app-key). 
+_list_ can be obtained by adding _.json_ to a card in the browser in the 
+list that should be monitored and search for _idList_ in the JSON-output.
+Note that in a production environment, _api_key_ and _api_token_ must be 
+specified in the Sensu settings rather than through CLI parameters. 
 
-TODO: Write usage instructions here
+## USAGE
+Check if a specific trello list is empty or contains cards
+
+### Required parameters
+
+| Parameter | Description                         |
+| --------- | ----------------------------------- |
+| -l LIST   | id of the Trello list to be checked |
+| -k KEY    | Trello API key                      |
+| -t TOKEN  | Trello Api-Token                    |
+
+### Optional parameters
+
+| Parameter | Description     |
+| --------- | --------------- |
+| -h HOST   | Trello API host |
+| -p PORT   | Trello API port |
+
+### Example:
+```
+ ./bin/check-trello-incidents.rb -k 123456789012 -t 1234567890121234567890 -l 1234567890 
+```
 
 ## Development
 
@@ -32,7 +62,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/trello-incidents.
+Bug reports and pull requests are welcome on GitHub at https://github.com/aboutsource/trello-incidents.
 
 
 ## License
