@@ -2,7 +2,7 @@
 
 Checks for cards in a trello list. If cards are present, the check returns 
 _CRITICAL_, containing name and date of last activity of card. When more 
-than one card is present, all card names and dates are returned with _;_ 
+than one card is present, all card names and dates are returned with *;* 
 delimiter.
 
 ## Installation
@@ -28,7 +28,7 @@ settings file located in _/etc/sensu/conf.d/_.
 _api_key_ and _api_token_ can be obtained from [Trello](https://trello.com/app-key). 
 _list_ can be obtained by adding _.json_ to a card in the browser in the 
 list that should be monitored and search for _idList_ in the JSON-output.
-Note that in a production environment, _api_key_ and _api_token_ must be 
+Note that in a production environment, _api_key_ and _api_token_ should be 
 specified in the Sensu settings rather than through CLI parameters. 
 
 ## USAGE
@@ -40,7 +40,7 @@ Check if a specific trello list is empty or contains cards
 | --------- | ----------------------------------- |
 | -l LIST   | id of the Trello list to be checked |
 | -k KEY    | Trello API key                      |
-| -t TOKEN  | Trello Api-Token                    |
+| -t TOKEN  | Trello API token                    |
 
 ### Optional parameters
 
