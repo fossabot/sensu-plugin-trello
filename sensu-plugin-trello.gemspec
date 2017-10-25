@@ -5,7 +5,7 @@ require 'sensu/plugin/trello/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "sensu-plugin-trello"
-  spec.version       = cd Sensu::Plugin::Trello::VERSION
+  spec.version       = Sensu::Plugin::Trello::VERSION
   spec.authors       = ["Hauke Altmann"]
   spec.email         = ["hauke.altmann@aboutsource.net"]
 
