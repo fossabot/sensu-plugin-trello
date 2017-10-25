@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "trello_incidents": {
+      "command": "check-trello-incidents.rb -l <TRELLO-LIST-ID>",
+      "interval": 120,
+      "standalone": true 
+    }
+  },
+  "trello_incidents": {
+    "api": {
+      "key": "<TRELLO-API-KEY>",
+      "token": "<TRELLO-API-TOKEN>"
+    }
+  }
+}
