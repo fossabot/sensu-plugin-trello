@@ -10,7 +10,7 @@ delimiter.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'trello-incidents'
+gem 'sensu-plugin-trello'
 ```
 
 And then execute:
@@ -19,7 +19,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install trello-incidents
+    $ gem install sensu-plugin-trello
 
 ## CONFIGURATION
 Configuration of API key and API token should be done through the sensu 
@@ -62,7 +62,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/aboutsource/trello-incidents.
+Bug reports and pull requests are welcome on GitHub at https://github.com/aboutsource/sensu-plugin-trello.
 
 
 ## License
