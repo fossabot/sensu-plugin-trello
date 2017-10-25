@@ -1,19 +1,18 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'trello/incidents/version'
+require 'sensu/plugin/trello/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "trello-incidents"
-  spec.version       = Trello::Incidents::VERSION
+  spec.name          = "sensu-plugin-trello"
+  spec.version       = cd Sensu::Plugin::Trello::VERSION
   spec.authors       = ["Hauke Altmann"]
   spec.email         = ["hauke.altmann@aboutsource.net"]
 
   spec.summary       = 'Check if a Trello list contains card(s)'
   spec.description   = 'Used for incident management where a card represents an incident.'
-  spec.homepage      = "https://github.com/aboutsource/trello-incidents"
+  spec.homepage      = "https://github.com/aboutsource/sensu-plugin-trello"
   spec.license       = "MIT"
-
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.executables   = Dir.glob('bin/**/*.rb').map { |file| File.basename(file) }
