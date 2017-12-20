@@ -1,4 +1,6 @@
 # Sensu check for new incidents in Trello
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Faboutsource-test%2Fsensu-plugin-trello.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Faboutsource-test%2Fsensu-plugin-trello?ref=badge_shield)
+
 
 Checks for cards in a trello list. If cards are present, the check returns 
 _CRITICAL_, containing name and date of last activity of card. When more 
@@ -69,3 +71,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/abouts
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Faboutsource-test%2Fsensu-plugin-trello.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Faboutsource-test%2Fsensu-plugin-trello?ref=badge_large)
